@@ -1,5 +1,5 @@
 /*
-Theme Name: Consult
+Theme Name: theaccount
 Theme URI: http://mine.com
 Description: Acoouting Services
 Version: 1.0
@@ -481,8 +481,16 @@ header.menu_fixed {
   position:fixed;
   top:0;
   padding:10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
 }
-header .container {position:relative;}
+header .container {
+  position:relative;
+/*
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+*/
+}
 header .container:before {
   content:'';
   position:absolute;
@@ -2420,6 +2428,9 @@ div.jp-volume-bar-value {
   resize:none;
 }
 #commentform p {position:relative;}
+#commentform textarea{
+  width: 100%;
+}
 #commentform p i {
   position:absolute;
   left:8px;
@@ -2439,9 +2450,9 @@ div.jp-volume-bar-value {
   letter-spacing:2px;
   border:0;
   box-shadow:0;
-  border-radius:5px;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
+  border-radius: 0;
 }
 #commentform input[type="submit"]:hover {
   background-color:#333;
@@ -2590,12 +2601,6 @@ div.jp-volume-bar-value {
   color:#fff;
   border-radius:9px;
 }
-.eva-service-box.style1:hover .fa,
-.eva-service-box.style2:hover .fa {
-  opacity:0.5;
-  transform:scale(0.8);
-  -webkit-transform:scale(0.8);
-}
 .eva-service-box.style3 .fa,
 .eva-service-box.style4 .fa {
   position:absolute;
@@ -2674,7 +2679,7 @@ div.jp-volume-bar-value {
   position:relative;
   padding:12px 48px 12px 20px;
   line-height:24px;
-  font-size:18px;
+  font-size:16px;
 }
 .accordion-heading .accordion-toggle:before {
   content: "\f107";
@@ -4420,7 +4425,7 @@ form.wpcf7-form input[type="submit"] { background: #f07241; }
 
 
 /* Main */
-<!--body.error404 #main {background-image: url(http://perfecti.evatheme.com/wp-content/uploads/2014/10/404_bg.jpg);} -->
+
 
 
 /* Blog Sidebar */
@@ -4452,7 +4457,8 @@ footer h6.widget-title {font-family: Source Sans Pro, sans-serif; font-size: 16p
   margin-bottom: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url(images/product-bg.jpg);
+  /*  background-image: url(images/product-bg.jpg);*/
+  background: #e0e0e0;
   background-position: 50% -320px;
 }
 
@@ -4465,7 +4471,7 @@ footer h6.widget-title {font-family: Source Sans Pro, sans-serif; font-size: 16p
   position: relative;
   margin-bottom: 20px;
 }
-.services h2:after{
+.services h2:after, #testimonial h3:after{
   content: '';
   width: 100px;
   height: 1px;
@@ -4475,7 +4481,7 @@ footer h6.widget-title {font-family: Source Sans Pro, sans-serif; font-size: 16p
   right: -110px;
   z-index: 0;
 }
-.services h2:before{
+.services h2:before, #testimonial h3:before{
   content: '';
   width: 100px;
   height: 1px;
@@ -4484,6 +4490,9 @@ footer h6.widget-title {font-family: Source Sans Pro, sans-serif; font-size: 16p
   top: 45%;
   left: -110px;
   z-index: 0;
+}
+#testimonial h3:after, #testimonial h3:before{
+  background-color: #cdcbcb;
 }
 
 #page .span12{
@@ -4495,13 +4504,14 @@ footer h6.widget-title {font-family: Source Sans Pro, sans-serif; font-size: 16p
 }
 .col-sm-9{
   width: 75%;
+  padding-right: 30px;
 }
 .col-sm-3{
   width: 25%;
   padding: 10px;
 }
 .col-sm-3 h3{
-  padding-left: 20px;
+  /*  padding-left: 20px;*/
 }
 .my-post{
   padding-right: 30px;
@@ -4549,7 +4559,7 @@ footer h6.widget-title {font-family: Source Sans Pro, sans-serif; font-size: 16p
   padding-left: 25px;
 }
 .custom-cat .home-blog figure img{
-   margin-top: 5px;
+  margin-top: 5px;
 }
 .col-sm-6, .col-sm-4{
   float: left;
@@ -4609,17 +4619,8 @@ footer h6.widget-title {font-family: Source Sans Pro, sans-serif; font-size: 16p
 .top-space{
   margin-top: 100px;
 }
-.locations-list li{
-  list-style: none;
-}
-.locations-list li a{
-  border-bottom: 1px solid #e0e0e0;
-  display: block;
-  padding: 8px 0;
-  font-size: 17px
-}
 .col-sm-3 h3{
-  padding-left: 20px;
+
   margin-bottom: 10px;
 }
 .recent-blogs ul{
@@ -4630,7 +4631,7 @@ footer h6.widget-title {font-family: Source Sans Pro, sans-serif; font-size: 16p
   padding: 0px 0px 0px 20px;
 }
 .recent-blogs li{
- list-style: none;
+  list-style: none;
   position: relative;
 }
 
@@ -4645,4 +4646,40 @@ footer .recent-blogs ul li a:before {
   border: 2px solid #666;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
+}
+
+#testimonial{
+  width: 80%;
+  margin: auto;
+}
+#testimonial h3{
+  font-size: 28px;
+  color: #333 !important;
+  position: relative;
+  display: table;
+  margin: auto;
+  margin-bottom: 30px;
+}
+#testimonial i{
+  padding: 0 10px;
+}
+#testimonial p{
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+#testimonial small{
+  font-size: 17px;
+  color: #999999;
+  position: relative;
+}
+.accordion-inner a{
+  color: #f07241;
+  display: inherit;
+  text-align: right;
+}
+.widget_categories ul.locations-list{
+  margin-bottom: 30px;
+}
+.widget.widget_categories{
+  margin-top: 38px;
 }

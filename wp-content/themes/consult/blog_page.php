@@ -51,7 +51,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <?php endwhile; ?>
 </div>
 
-    <div class="col-sm-3">
+    <div class="col-sm-3 widget widget_categories">
       <h3>Blog Categories</h3>
       <?php
 /**
@@ -71,6 +71,20 @@ $locations_list = wp_list_categories( array(
 if ( $locations_list )
   echo '<ul class="locations-list">' . $locations_list . '</ul>';
       ?>
+
+      <h3>Recent Posts</h3>
+      <ul>
+        <?php
+$args = array( 'numberposts' => '5' );
+$recent_posts = wp_get_recent_posts($args);
+foreach( $recent_posts as $recent ){
+  echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+}
+        ?>
+
+      </ul>
+
+
     </div>
   </div>
 

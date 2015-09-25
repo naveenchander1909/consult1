@@ -127,6 +127,10 @@
   opacity:1 !important;
 }
 
+#owl-demo .owl-next{
+  right: -40px;
+}
+
 .owl-prev{
   position: absolute;
   top: 30%;

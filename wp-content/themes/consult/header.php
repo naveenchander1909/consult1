@@ -64,18 +64,18 @@
 
 <div id="top_bar">
           <div class="container">
-                        	<div class="top_bar_phone"><i class="fa fa-phone"></i>(91) 8750701909 </div>
-              <div class="top_bar_address"><i class="fa fa-map-marker"></i>E-10, 514, Nehru Vihar, Dayalpur, Delhi-94</div>
+            <div class="top_bar_phone"><i class="fa fa-phone"></i>(91) 9810941240 </div>
+              <div class="top_bar_address"><i class="fa fa-map-marker"></i>E-10/524, Nehru Vihar, Dayalpur, Delhi-94</div>
               <div class="eva-social-icon">
-                                <a href="#" target="_blank" title="facebook" class="facebook">
+                                <a href="https://www.facebook.com/" target="_blank" title="facebook" class="facebook">
                                     <i class="fa fa-facebook"></i>
                                 </a>
 
-                                <a href="#" target="_blank" title="google-plus" class="google-plus">
+                <a href="https://plus.google.com" target="_blank" title="google-plus" class="google-plus">
                                     <i class="fa fa-google-plus"></i>
                                 </a>
 
-                                <a href="#" target="_blank" title="twitter" class="twitter">
+                <a href="https:/twitter.com" target="_blank" title="twitter" class="twitter">
                                     <i class="fa fa-twitter"></i>
                                 </a>
 
@@ -89,7 +89,7 @@
           <div id="top_logo">
             <div class="eva-logo" style=" margin-top:0px; margin-bottom:0px;">
                             <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                <img class="logo-img" src="<?php bloginfo('template_url'); ?>/images/logo_2x.png" style="width:158px" alt="Perfecti">                            </a>                        </div>
+                                <img class="logo-img" src="<?php bloginfo('template_url'); ?>/images/logo_2x.png" style="width:180px" alt="the account">                            </a>                        </div>
                     </div>
           <!-- //Logo -->
 
@@ -130,7 +130,7 @@
       $intro = get_post_meta($post->ID, 'url', true);
       ?>
 
-      <li data-background='<?php echo $feat_image; ?>'>
+      <li data-background='<?php echo $feat_image; ?>' class="new<?php echo get_post_thumbnail_id($post->ID) ?>">
         <div class="flick-title"><?php the_title(); ?></div>
         <div class="flick-sub-text"><?php the_content();?></div>
         <a href="<?php echo $intro; ?>" class="btn more-link">

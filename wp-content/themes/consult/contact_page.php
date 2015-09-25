@@ -5,7 +5,7 @@ Template Name: contact us
 
 <?php get_header(); ?>
 
-<section id="page-title" style="background-image: url(http://perfecti.evatheme.com/wp-content/uploads/2014/10/page-title101.jpg)">
+<section id="page-title">
   <!-- Start Container -->
   <div class="container top-space">
     <h2>Contacts</h2>

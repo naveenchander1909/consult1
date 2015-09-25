@@ -52,8 +52,8 @@ foreach( $recent_posts as $recent ){
       <div class="row">
         <!-- Logo -->
         <div id="footer_logo" class="span2">
-          <a class="logo" href="./Perfecti   Business MultiPurpose Theme_files/Perfecti   Business MultiPurpose Theme.html">
-            <img src="<?php bloginfo('template_url'); ?>/images/footer_logo.png" alt="Perfecti">
+          <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <img src="<?php bloginfo('template_url'); ?>/images/footer_logo.png" alt="the account">
           </a>
         </div> <!-- //Logo -->
 

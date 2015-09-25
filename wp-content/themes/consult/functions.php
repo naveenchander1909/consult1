@@ -63,6 +63,31 @@ add_action( 'init', 'add_custom_taxonomies', 0 );
 ?>
 
 <?php
+$args = array(
+  'theme_location' => 'header-menu',
+  'container' => '',
+  'echo' => false,
+  'items_wrap' => '%3$s'
+);
+
+?>
+
+<?php
+
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+
+add_action( 'init', 'register_my_menu' );
+
+function add_anchorclass( $anchorclass ) {
+  return preg_replace( '/<a /', '<a class="menu-link main-menu-link"', $anchorclass );
+}
+
+add_filter( 'wp_nav_menu', 'add_anchorclass' );
+?>
+
+<?php
 function my_custom_post_product() {
   $labels = array(
     'name'               => _x( 'Products', 'post type general name' ),

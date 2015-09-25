@@ -1,10 +1,10 @@
 .flickerplate {
   position: relative;
   width: 100%;
-  height: 550px;
+  height: 500px;
   background-color: #e6e6e6;
   overflow: hidden;
-  margin: auto;
+  margin: 70px auto 0;
 }
 
 .flickerplate ul.flicks {
@@ -22,6 +22,10 @@
   background-position: center;
   background-size: cover;
   display: table
+}
+
+.flickerplate ul.flicks>li.new206{
+  background-position: center bottom;
 }
 
 .flickerplate ul.flicks>li .flick-inner {
@@ -71,7 +75,7 @@
   padding-right: 18px;
   padding-top: 12px;
   padding-bottom: 12px;
-/*  background-color: rgba(0,0,0,0.6)*/
+  /*  background-color: rgba(0,0,0,0.6)*/
   padding: 0;
 }
 
@@ -79,12 +83,44 @@
   display: block;
   position: absolute;
   top: 10%;
-  width: 10%;
+  width: 38px;
   height: 80%;
   z-index: 100;
   overflow: hidden;
   font-family: "flickerplate";
   vertical-align: middle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 .flickerplate .arrow-navigation:before {
@@ -94,7 +130,7 @@
   margin-left: -25px;
   margin-top: -25px;
   height: 50px;
-  width: 50px;
+  width: 10px;
   opacity: 0;
   filter: alpha(opacity=0);
   text-align: center;
@@ -106,6 +142,10 @@
   -o-transition: opacity 0.2s ease-out;
   -ms-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out
+
+
+
+
 }
 
 .no-touch .flickerplate .arrow-navigation:hover {
@@ -122,7 +162,7 @@
 }
 
 .flickerplate .arrow-navigation.left {
-  left: 0%
+  left: 2%;
 }
 
 .flickerplate .arrow-navigation.left:before {
@@ -130,7 +170,7 @@
 }
 
 .flickerplate .arrow-navigation.right {
-  right: 0%
+  right: 2%;
 }
 
 .flickerplate .arrow-navigation.right:before {
@@ -322,4 +362,9 @@
 
 .flick-block-text {
   background-color: 0 !important;
+}
+@media only screen and (max-width: 768px) {
+  .flickerplate{
+    margin-top: 0;
+  }
 }

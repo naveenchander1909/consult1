@@ -45,17 +45,27 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <div class="full-width-content light bg-parallax">
     <div class="container">
         <div class="row-fluid">
-            <div class="span12">
-                <div class="eva-column-wrap" style="padding-bottom:0px;">
-                    <h1 class="text-center">Hurry! 31st is the last date for income tax return </h1>
-                    <h2 class="text-center">Click below to fill your return</h2>
-                    <p style="text-align: center;">
-                        <a href="#" target="_blank" class="btn btn-large" style="background:#f07241; color: ">
-                            <i class="fa fa-chevron-right"></i>
-                            Read more</a>
-                    </p>
+
+
+          <div id="testimonial" class="owl-carousel testimonail">
+
+            <div class="item">
+              <div class="eva-service-box style1">
+                <h3>Testimonail</h3>
+                  <div class="eva-service-content">
+
+                  <p><i class="fa fa-quote-left"></i>Thank you very much for all your help in setting up my new company and clearing up all outstanding business in my sole trader accounts. For the first time in years I have peace of mind regards my business accounts. Your workforce are a credit to you, the girls at reception.<i class="fa fa-quote-right"></i></p>
+                  <small>Jain & associates</small>
+
                 </div>
+              </div>
             </div>
+
+
+
+          </div> <!-- .testimonail -->
+
+
         </div>
     </div>
 </div> <!-- .bg-parallax -->
