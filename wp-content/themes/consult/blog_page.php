@@ -5,11 +5,13 @@ Template Name: Blog
 
 <?php get_header(); ?>
 
+
+
 <div class="blog container top-space">
 
   <div class="wrapper clearfix custom-cat">
 <div class="col-sm-9">
-  <div class="services"><h2>Our Blog</h2></div>
+
 
   <?php
 
@@ -32,7 +34,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
             <div class="meta-container">
               <ul class="loop-meta">
-                <li class="author"><?php the_author();?></li>
+
                 <li class="date"><?php the_date();?></li>
                 <li class="comment"><i class="fa fa-comment"></i>
                   <a href="<?php comments_link(); ?>"><?php comments_number( 'No comment', '1 comment', '% comments' ); ?></a> </li>
@@ -41,7 +43,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
             </div>
 
 
-            <?php the_excerpt(); ?>
+            <p><?php echo excerpt(50);  ?></p>
             <a href="<?php the_permalink(); ?>" class="btn more-link">More</a>
           </div>
         </div>
@@ -75,13 +77,23 @@ if ( $locations_list )
       <h3>Recent Posts</h3>
       <ul>
         <?php
-$args = array( 'numberposts' => '5' );
-$recent_posts = wp_get_recent_posts($args);
-foreach( $recent_posts as $recent ){
-  echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-}
+$queryObject = new WP_Query( 'post_type=blogging&posts_per_page=5' );
+// The Loop!
+if ($queryObject->have_posts()) {
         ?>
 
+          <?php
+  while ($queryObject->have_posts()) {
+    $queryObject->the_post();
+          ?>
+
+          <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+          <?php
+  }
+          ?>
+        <?php
+}
+        ?>
       </ul>
 
 

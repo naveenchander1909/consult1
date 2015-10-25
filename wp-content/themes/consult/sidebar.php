@@ -11,6 +11,7 @@ $(function(){
 </script>
 <div class="my-sevices">
 <h2>Our Services</h2>
+  <div class="services-cat"></div>
   <div class="eva-toggle">
   <?php
 
@@ -24,7 +25,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
       </div>
 
       <div class="accordion-body collapse" >
-        <div class="accordion-inner"><?php the_excerpt();?>
+        <div class="accordion-inner"><p><?php echo excerpt(15);  ?></p>
           <a href="<?php the_permalink(); ?>" class="more-link">More</a>
         </div>
       </div>

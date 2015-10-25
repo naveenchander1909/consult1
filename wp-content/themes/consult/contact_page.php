@@ -14,6 +14,7 @@ Template Name: contact us
   <!-- End Container -->
 </section>
 
+
 <section id="main">
   <div class="container">
     <div id="page">
@@ -28,7 +29,8 @@ Template Name: contact us
         </div>
 
         <div class="span6">
-          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z7b3OZ-dI60U.kKT7gVjw6y9c" width="640" height="480"></iframe>
+          <div id="map"></div>
+
         </div>
 
         </div>
@@ -46,6 +48,19 @@ Template Name: contact us
 </section>
 <!-- End Main -->
 
+<script type="text/javascript">
+  var map;
+  var infowindow;
 
+  function initMap() {
+    var pyrmont = {lat: -33.867, lng: 151.195};
 
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: pyrmont,
+      zoom: 15
+    });
+  };
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXeaZGULoYq4BRuMu9RfO7xBD1jfr6ris&signed_in=true&libraries=places&callback=initMap" async defer></script>
 <?php get_footer(); ?>

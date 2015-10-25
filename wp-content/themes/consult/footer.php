@@ -25,13 +25,23 @@
         <h6 class="widget-title">Recent Blogs</h6>
         <ul>
           <?php
-$args = array( 'numberposts' => '5' );
-$recent_posts = wp_get_recent_posts($args);
-foreach( $recent_posts as $recent ){
-  echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-}
+$queryObject = new WP_Query( 'post_type=blogging&posts_per_page=5' );
+// The Loop!
+if ($queryObject->have_posts()) {
           ?>
-        </ul>
+
+          <?php
+  while ($queryObject->have_posts()) {
+    $queryObject->the_post();
+          ?>
+
+          <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+          <?php
+  }
+          ?>
+          <?php
+}
+          ?>        </ul>
       </div>
 
 

@@ -366,5 +366,14 @@
 @media only screen and (max-width: 768px) {
   .flickerplate{
     margin-top: 0;
+    height: 250px;
+  }
+  .flickerplate ul.flicks>li .flick-sub-text{
+    line-height: 1.625rem;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  .flickerplate ul.flicks>li .flick-title{
+    font-size: 1.1rem;
   }
 }

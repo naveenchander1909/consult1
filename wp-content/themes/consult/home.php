@@ -9,8 +9,6 @@
 
     <div id="owl-demo" class="owl-carousel">
 
-
-
       <?php
 // Looping to compugraphics custom post types
 $args = array( 'post_type' => 'product', 'posts_per_page' => -1 );
@@ -25,7 +23,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
             <div class="eva-service-content">
               <h3 class="page-title"><?php the_title();?></h3>
-              <?php the_excerpt(); ?>
+              <p><?php echo excerpt(15);  ?></p>
               <a href="<?php the_permalink(); ?>" class="btn more-link">More</a>
             </div>
           </div>
@@ -42,10 +40,9 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 </div> <!-- #page -->
 
-<div class="full-width-content light bg-parallax">
+<div class="full-width-content light">
     <div class="container">
         <div class="row-fluid">
-
 
           <div id="testimonial" class="owl-carousel testimonail">
 
@@ -53,7 +50,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
               <div class="eva-service-box style1">
                 <h3>Testimonail</h3>
                   <div class="eva-service-content">
-
+                    <img class="testimonial" src="<?php bloginfo('template_url'); ?>/images/3-130x130.jpg" alt="testimonial">
                   <p><i class="fa fa-quote-left"></i>Thank you very much for all your help in setting up my new company and clearing up all outstanding business in my sole trader accounts. For the first time in years I have peace of mind regards my business accounts. Your workforce are a credit to you, the girls at reception.<i class="fa fa-quote-right"></i></p>
                   <small>Jain & associates</small>
 
@@ -75,11 +72,6 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
   <div class="services"><h2>Our Blog</h2></div>
 
-
-
-
-
-
           <?php
 
 $args = array( 'post_type' => 'blogging', 'posts_per_page' => -1 );
@@ -96,12 +88,11 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
               <div class="eva-service-content loop-block">
 
-
                 <div class="loop-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></div>
 
                 <div class="meta-container">
                   <ul class="loop-meta">
-                    <li class="author"><?php the_author();?></li>
+
                     <li class="date"><?php the_date();?></li>
                     <li class="comment"><i class="fa fa-comment"></i>
                       <a href="<?php comments_link(); ?>"><?php comments_number( 'No comment', '1 comment', '% comments' ); ?></a> </li>
@@ -110,8 +101,9 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 </div>
 
 
-                <?php the_excerpt(); ?>
+                <p><?php echo excerpt(30);  ?></p>
                 <a href="<?php the_permalink(); ?>" class="btn more-link">More</a>
+
               </div>
             </div>
           </div>

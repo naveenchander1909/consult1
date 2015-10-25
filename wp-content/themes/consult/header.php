@@ -19,6 +19,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
   <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -28,10 +29,10 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css" type="text/css" />
 
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/responsive.css" type="text/css" />
+
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/flickerplate.css" type="text/css" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/owl.carousel.css" type="text/css" />
-
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/responsive.css" type="text/css" />
     <!--[if lt IE 9]>
   <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
   <![endif]-->
@@ -43,6 +44,14 @@
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/evatheme.js"></script>
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.matchHeight.js"></script>
+
+  <?php
+  add_action( 'wp_enqueue_scripts', 'ajax_test_enqueue_scripts' );
+  function ajax_test_enqueue_scripts() {
+  wp_enqueue_script( 'test', plugins_url( '/test.js'), array('jquery'), '1.0', true );
+  }
+  ?>
 
   <script>
     $(function(){
@@ -53,6 +62,8 @@
           flick_animation 		: 'transform-slide'
         });
       });
+
+
 </script>
 
 

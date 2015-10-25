@@ -26,7 +26,7 @@ get_header(); ?>
 
               <div class="meta-container">
                 <ul class="loop-meta">
-                  <li class="author"><?php the_author();?></li>
+
                   <li class="date"><?php the_date();?></li>
                   <li class="comment"><i class="fa fa-comment"></i>
                     <a href="<?php comments_link(); ?>"><?php comments_number( 'No comment', '1 comment', '% comments' ); ?></a> </li>

@@ -139,6 +139,45 @@
 }
 
 @media (max-width: 767px) {
+  .col-sm-4, .col-sm-9, .col-sm-3{
+    width: 100%;
+    float: none;
+    padding-right: 0;
+  }
+  .owl-item .item img{
+    width: 100px;
+    height: 100px;
+  }
+  #testimonial p{
+    font-size: 15px;
+  }
+  .bg-parallax{
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .top-space{
+    margin-top: 20px;
+  }
+  .our-services .item figure{
+    max-width: 100%;
+    margin: 0;
+    padding-right: 0;
+    margin: auto;
+    float: none;
+    text-align: left;
+  }
+  .custom-cat .home-blog figure{
+    margin-bottom: 20px;
+  }
+  .custom-cat .home-blog .eva-service-content{
+    padding: 0;
+  }
+  .our-services .eva-service-content{
+    float: none;
+    text-align: left;
+    max-width: 100%;
+    margin-top: 20px;
+  }
   #top_menu .menu-header-menu-container{
     position: absolute;
     z-index: 101;
@@ -155,7 +194,7 @@
     font-size: 25px;
   }
   #main h2{
-    font-size: 20px;
+    font-size: 22px;
   }
   .col-xs-4{
     width: 100%;
@@ -201,8 +240,8 @@
   header {position:static;}
   header:before {height:8px;}
 
-  .top_bar_phone {font-size:10px; line-height:15px; padding:10px 15px 10px 0;}
-  .top_bar_address {font-size:10px; line-height:15px; padding:10px 15px 10px 0; width:150px;}
+  .top_bar_phone {font-size:15px; line-height:15px; padding:15px 15px 10px 0;}
+  .top_bar_address {font-size:10px; line-height:15px; padding:10px 15px 10px 0; width:150px; display: none;}
   .top_bar_phone i, .top_bar_address i {font-size:13px; line-height:15px;}
   .eva-social-icon a {margin-left:5px;}
 
